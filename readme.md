@@ -1,6 +1,8 @@
-**Build**=
-    mvn clean package
+**Build**
+
+`mvn clean package` 
 
 **Run**
-    sudo docker build .
+
+`sudo docker build .`
 
