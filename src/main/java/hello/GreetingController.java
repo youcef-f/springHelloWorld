@@ -18,8 +18,12 @@ public class GreetingController {
     }
     
     @RequestMapping("/sayhi")
-    public Greeting sayhi() {
+    public Greeting sayhi(
+            @RequestParam(value="name1") String name1,
+            @RequestParam(value="name2", defaultValue="name2") String name2,
+            @RequestParam(value="name3", defaultValue="name3") String name3
+    ) {
         
-        return new Greeting(counter.incrementAndGet(), "hi there");
+        return new Greeting(counter.incrementAndGet(), "hi there"+" "+name1+" "+name2+" "+name3);
     }
 }
